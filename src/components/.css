@@ -1,0 +1,182 @@
+/* StockListAlert.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    
+    height: 100%;
+    width: 100%;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  .stock-container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #1e1e1e; /* Dark container background */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #82ca9d; /* Light green for headings */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .stock-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-grow: 1; /* Ensure this section grows to fill space */
+  }
+  
+  /* Graph Section Styling */
+  .graph-section {
+    flex: 3; /* Increased space for the graph */
+    padding: 30px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    height: 600px; /* Fixed height for consistency */
+  }
+  
+  .graph-section h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+  
+  /* Table Section Styling */
+  .table-section {
+    flex: 2; /* Smaller than the graph section */
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    height: 600px; /* Fixed height for consistency */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    
+  }
+  
+  .table-section h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Stock Table Styling */
+  .stock-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .stock-table th, .stock-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #333;
+  }
+  
+  .stock-table th {
+    background-color: #333;
+  }
+  
+  .stock-table td {
+    background-color: #444;
+    color: white; /* Ensuring text contrast */
+  }
+  
+  /* Alerts Section */
+  .alert-list {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .alert-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .alert-list li {
+    margin: 10px 0;
+    color: #ffcc00; /* Alert text color */
+  }
+  
+  /* Limit Inputs Styling */
+  .limit-inputs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .limit-inputs .buy-limit,
+  .limit-inputs .sell-limit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .limit-inputs label {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .limit-inputs input {
+    width: 150px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: #2c2c2c; /* Dark input background */
+    color: white;
+    text-align: center;
+  }
+  
+  .limit-inputs input:focus {
+    outline: none;
+    border: 1px solid #82ca9d; /* Light green focus */
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 10px 15px;
+    background-color: #82ca9d; /* Light green for buy buttons */
+    border: none;
+    border-radius: 5px;
+    color: #1e1e1e; /* Dark text on buttons */
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #5ba874; /* Darker green on hover */
+  }
+  
+  .sell-limit button {
+    background-color: #FF7300; /* Orange for sell buttons */
+  }
+  
+  .sell-limit button:hover {
+    background-color: #e06800; /* Darker orange on hover */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .stock-content {
+      flex-direction: column; /* Stack content on smaller screens */
+    }
+  }
+  
