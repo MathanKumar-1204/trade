@@ -24,7 +24,7 @@ const Backtest = () => {
     console.log('Sending data:', data);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/run_strategy', data, {
+      const response = await axios.post('https://tradebacktest.onrender.com/run_strategy', data, {
         headers: {
           'Content-Type': 'application/json'
         }
