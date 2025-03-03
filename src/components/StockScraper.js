@@ -20,7 +20,7 @@ const StockScraper = () => {
         setAnalysis(''); // Clear previous recommendation
 
         try {
-            const response = await axios.post('http://localhost:5001/api/get_news', { stockSymbol });
+            const response = await axios.post('https://tradestockscrape.onrender.com/api/get_news', { stockSymbol });
             setNewsHeadlines(response.data.newsHeadlines || []);
             setAnalysis(response.data.analysis); // Set the recommendation
         } catch (err) {
