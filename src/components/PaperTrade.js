@@ -10,16 +10,16 @@ const PaperTrade = () => {
   useEffect(() => {
     const fetchAccountData = async () => {
       try {
-        const accountResponse = await fetch('http://127.0.0.1:5002/api/account');
+        const accountResponse = await fetch('https://tradealpaca.onrender.com/api/account');
         const accountData = await accountResponse.json();
         setAccount(accountData);
 
-        const positionsResponse = await fetch('http://127.0.0.1:5002/api/positions');
+        const positionsResponse = await fetch('https://tradealpaca.onrender.com/api/positions');
         const positionsData = await positionsResponse.json();
         setPositions(positionsData);
 
         // Fetch historical data for the specified stock symbol
-        const historicalResponse = await fetch(`http://127.0.0.1:5002/api/historical-data/${stockSymbol}`);
+        const historicalResponse = await fetch(`https://tradealpaca.onrender.com/api/historical-data/${stockSymbol}`);
         const historicalData = await historicalResponse.json();
         
         // Ensure historicalData is an array before setting it
